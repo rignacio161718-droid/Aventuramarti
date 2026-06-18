@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura Marti 💙</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Pantalla de inicio -->
+    <div id="inicio">
+
+        <h1>💙 La aventura de Marti 💙</h1>
+
+        <p>
+            Bienvenida a una aventura creada especialmente para ti ✨
+        </p>
+
+        <button onclick="comenzar()">
+            Comenzar
+        </button>
+
+    </div>
+
+    <!-- Menú -->
+    <!-- INTRODUCCIÓN -->
+
+<div id="menu" style="display:none;">
+
+    <div class="historia">
+
+        <h2>✨ La Aventura de Marti ✨</h2>
+
+        <p>
+            Había una vez una princesa llamada Marti que vivía en el reino de Dunbroch.
+        </p>
+
+        <p>
+            Un día una serie de extraños sucesos comenzaron a ocurrir.
+        </p>
+
+        <p>
+            Personajes de distintos mundos aparecieron por todas partes y el caos empezó a extenderse.
+        </p>
+
+        <p>
+            Para recuperar la paz, Marti deberá superar desafíos, encontrar aliados y enfrentarse al causante.
+        </p>
+
+        <p>
+            💙 La aventura está a punto de comenzar.
+        </p>
+
+        <button onclick="abrirStitch()">
+            ✨ Comenzar aventura ✨
+        </button>
+
+    </div>
+
+</div>   
+
+    <!-- Juego Stitch -->
+    <div id="stitchJuego" style="display:none;">
+
+        <h2>💙 Encuentra a Stitch 💙</h2>
+
+        </p>
+
+        <div class="cuadricula" id="cuadriculaStitch">
+        </div>
+
+        <p id="resultadoStitch"></p>
+
+    </div>
+
+<!-- INTRODUCCIÓN NIVEL 2 -->
+<div id="introGalaga" style="display:none;">
+
+    <div class="historia">
+
+        <h2>🏰 Castillo de Muy Muy Lejano 🏰</h2>
+
+        <p>
+            💙 Stitch está agradecido por haberlo encontrado y decide acompañar a La princesa Marti de Dunbroch en su aventura.
+        </p>
+
+        <p>
+            Tras un largo viaje, ambos llegan al legendario Castillo de Muy Muy Lejano.
+        </p>
+
+        <p>
+            Pero algo terrible está ocurriendo...
+        </p>
+
+        <p>
+            Shrek intenta destruir los dulces favoritos de Marti y cada dulce perdido acerca la misión al fracaso.
+        </p>
+
+        <p>
+            🍫 ¡Debes protegerlos antes de que desaparezcan para siempre!
+        </p>
+
+        <button onclick="abrirGalaga()">
+            🛡️ Defender los tubitos
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- Nivel 2 -->
+<div id="galagaJuego" style="display:none;">
+
+    <h2 class="tituloGalaga">
+        🍫 Defiende los tubitos 🍫
+    </h2>
+
+    <p>
+        👹 ¡Shrek quiere robar todos los dulces!
+        Ayuda a Marti a protegerlos.
+    </p>
+
+    <canvas
+        id="canvasGalaga"
+        width="600"
+        height="600">
+    </canvas>
+
+</div>
+
+<!-- INTRODUCCIÓN LABERINTO -->
+<div id="introLaberinto" style="display:none;">
+
+    <div class="historia">
+
+        <h2>🌙 El Laberinto de Shrek 🌙</h2>
+
+        <p>
+            😡 Shrek está furioso por haber perdido.
+        </p>
+
+        <p>
+            Con ayuda de la Madre Gothel, la falsa madre de Rapunzel, logra capturarte.
+        </p>
+
+        <p>
+            Ambos te llevan a una antigua prisión escondida en el bosque y te encierran dentro de un enorme laberinto mágico.
+        </p>
+
+        <p>
+            Parece imposible escapar...
+        </p>
+
+        <p>
+            Pero a lo lejos aparece una figura conocida.
+        </p>
+
+        <p>
+            💚 Es Miguel Rider.
+        </p>
+
+        <p>
+            Ha venido a rescatarte.
+        </p>
+
+        <p>
+            🧭 Ayuda a Miguel Rider a encontrar la salida.
+        </p>
+
+        <button onclick="abrirLaberinto()">
+            🧭 Entrar al laberinto
+        </button>
+
+    </div>
+
+</div>    
+
+    <!-- NIVEL 3 -->
+<div id="laberintoJuego" style="display:none;">
+
+    <h2>🧭 Laberinto Mágico 🧭</h2>
+
+    <p>
+        Usa las flechas para mover a Miguel Rider hasta la salida ⭐
+    </p>
+
+    <canvas
+        id="canvasLaberinto"
+        width="1250"
+        height="750">
+    </canvas>
+
+</div>
+
+<!-- INTRO BOSS -->
+
+<div id="introBoss" style="display:none;">
+
+    <div class="historia">
+
+        <h2>👹 Batalla Final 👹</h2>
+
+        <p>
+            Miguel Rider logró rescatarte.
+        </p>
+
+        <p>
+            Pero Shrek sigue esperando...
+        </p>
+
+        <p>
+            😡 Está furioso por haber perdido.
+        </p>
+
+        <p>
+            ⚔️ Es hora del combate final.
+        </p>
+
+        <button onclick="abrirBoss()">
+            ⚔️ Enfrentar a Shrek
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- JUEGO DEL BOSS -->
+
+<div id="bossJuego" style="display:none;">
+
+    <h2 class="tituloGalaga">
+        👹 Shrek Final Boss 👹
+    </h2>
+
+    <canvas
+        id="canvasBoss"
+        width="1200"
+        height="850">
+    </canvas>
+
+</div>
+ 
+<div id="finalJuego" style="display:none;">
+
+    <div class="historia">
+
+        <h2>💙 Felicidades Marti 💙</h2>
+
+        <p>
+            🎉 Felicidades, terminaste esta aventura.
+        </p>
+
+        <p>
+            Intenté hacerte este juego jaja, espero que te haya gustado.
+        </p>
+
+        <p>
+            Traté de hacerlo algo entretenido y divertido para que pasaras un buen rato.
+        </p>
+
+        <p>
+            Como recompensa por completar toda la aventura, te ganaste unas gomitas 🍬 y otras sorpresas más que tengo guardadas.
+        </p>
+
+        <p>
+            💙 Gracias por jugar hasta el final. 💙
+        </p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
